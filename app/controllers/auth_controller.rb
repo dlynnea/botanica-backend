@@ -2,12 +2,14 @@ require "jwt"
 
 class AuthController < ApplicationController
 
+    skip_before_action :authorized
+
     def login
+
         username = params[:username]
         password = params[:password]
 
         @user = User.find_by username: username
-
         if !@user
             render status: :unauthorized
         else
@@ -19,7 +21,7 @@ class AuthController < ApplicationController
                     user_id: @user.id,
                     username: @user.username
                 }, secret)
-                render json: { token: token }
+                render json: { user: UserSerializer.new(@user), token: token }
             end
         end
     end

@@ -1,6 +1,6 @@
 class ApplicationController < ActionController::API
 
-# before_action :authorized
+before_action :authorized
 
 def encode_token(payload)
     JWT.encode(payload, 'payload')
@@ -36,6 +36,7 @@ def authorized
     render json: { message: 'Please log in' }, status: :unauthorized unless logged_in?
 end
 
+end
 
     # def authenticate
     #     authorization_header = request.headers[:authorization]
@@ -49,4 +50,3 @@ end
     #         @user = User.find(decoded_token["user_id"])
     #     end
     # end
-end
