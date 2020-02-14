@@ -10,6 +10,7 @@ class AuthController < ApplicationController
         password = params[:password]
 
         @user = User.find_by username: username
+        
         if !@user
             render status: :unauthorized
         else
