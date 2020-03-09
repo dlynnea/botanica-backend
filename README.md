@@ -22,6 +22,7 @@ The following packages will also need to be installed:
 ### Packages Used
 
 gem 'rack-cors'
+
 gem "jwt", "~> 2.2"
 
 ## Built With
