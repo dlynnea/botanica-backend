@@ -1,24 +1,37 @@
-# README
+# Botanica
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+An herbal medicine recipe blog with a Ruby on Rails Backend, React Frontend (https://github.com/dlynnea/botanica-frontend) and JWT OAuth for user-authentication.
 
-Things you may want to cover:
+## Getting Started
 
-* Ruby version
+To get started, clone this repository in your terminal.
 
-* System dependencies
+### Installing
 
-* Configuration
+To get this project running on your local machine, run rails db:create, rails db:migrate, and rails db:seed. Finally rails s to get the server running for the backend. 
+For intallatin of the frontend, click the link above and follow those instructions.
 
-* Database creation
+```
+rails db:create
+rails db:migrate
+rails db:seed
+```
 
-* Database initialization
+The following packages will also need to be installed:
 
-* How to run the test suite
+### Packages Used
 
-* Services (job queues, cache servers, search engines, etc.)
+gem 'rack-cors'
+gem "jwt", "~> 2.2"
 
-* Deployment instructions
+## Built With
 
-* ...
+* [Rails](https://rubyonrails.org/) - Ruby on Rails Backend
+* [React](https://reactjs.org/) - React.js Frontend
+* [Sass](https://sass-lang.com/) - Sass for styling
+
+
+## Authors
+
+* **Dani Matton** 
+[dlynnea](https://github.com/dlynnea)
